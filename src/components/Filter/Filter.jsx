@@ -5,6 +5,11 @@ import { Title, Label } from './Filter.styled';
 export function Filter() {
   const dispatch = useDispatch();
 
+  // const handleInput = e => {
+  //   console.log(e.target.value);
+  //   dispatch(filterContacts(e.target.value));
+  // };
+
   return (
     <>
       <Title>Find contacts by name</Title>
@@ -14,6 +19,7 @@ export function Filter() {
           name="filter"
           required
           onChange={e => dispatch(filterContacts(e.target.value))}
+          // onChange={handleInput}
         />
       </Label>
     </>

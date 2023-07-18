@@ -4,8 +4,9 @@ import { filterInitialState } from './constants';
 export const filterSlice = createSlice({
   name: 'filter',
   initialState: filterInitialState,
-  reducer: {
+  reducers: {
     filterContacts(state, action) {
+      console.log(action.payload);
       state.filterValue = action.payload.trim();
     },
   },
