@@ -13,7 +13,6 @@ const handleRejected = ({ contacts }, action) => {
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: contactsInitialState,
-
   extraReducers: {
     [fetchContacts.pending]: handlePending,
     [addContact.pending]: handlePending,
@@ -44,33 +43,3 @@ const contactsSlice = createSlice({
 });
 
 export const contactsReducer = contactsSlice.reducer;
-
-// reducers: {
-//   addContact: {
-//     reducer(state, action) {
-//       state.contacts.items.push(action.payload);
-//     },
-//     prepare(name, number) {
-//       return {
-//         payload: {
-//           name,
-//           number,
-//           id: nanoid(),
-//         },
-//       };
-//     },
-//   },
-
-//   deleteContact(state, action) {
-//     const index = state.contacts.items.findIndex(
-//       contact => contact.id === action.payload
-//     );
-//     state.contacts.items.splice(index, 1);
-//   },
-
-//   filterContacts(state, action) {
-//     state.filter = action.payload.trim();
-//   },
-// },
-// export const { addContact, deleteContact, filterContacts } =
-//   contactsSlice.actions;
