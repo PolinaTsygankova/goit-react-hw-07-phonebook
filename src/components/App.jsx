@@ -23,7 +23,6 @@ export function App() {
       <ContactTitle>Contacts</ContactTitle>
       <Filter />
       {isLoading && !error && <Loader />}
-      {/* <Loader /> */}
       <ContactList />
     </MainDiv>
   );
